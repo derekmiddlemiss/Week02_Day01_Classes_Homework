@@ -75,7 +75,6 @@ class TestHomework < MiniTest::Test
     assert_equal(1, pistons.points)
   end
 
-
 end
 
 
