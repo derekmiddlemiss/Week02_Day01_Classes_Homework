@@ -25,5 +25,9 @@ class Student
     return "My name is #{@name}, how are you?"
   end
 
+  def say_favourite_language(language)
+    return "My favourite language is #{language}"
+  end
+
 end
 
