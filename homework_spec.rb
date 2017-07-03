@@ -61,7 +61,20 @@ class TestHomework < MiniTest::Test
     assert_equal(true, pistons.player_in_team?("Chad Hunter"))
     assert_equal(false, pistons.player_in_team?("Theresa May"))
   end
-      
+  
+  def test_points
+    pistons = SportsTeam.new("Pennsylvania Pistons", ["Bradley Smith", "Chad Hunter"], "Henry Black")
+    assert_equal(0, pistons.points)
+  end
+
+  def test_match_played
+    pistons = SportsTeam.new("Pennsylvania Pistons", ["Bradley Smith", "Chad Hunter"], "Henry Black")
+    pistons.match_played("Win")
+    assert_equal(1, pistons.points)
+    pistons.match_played("Lose")
+    assert_equal(1, pistons.points)
+  end
+
 
 end
 
