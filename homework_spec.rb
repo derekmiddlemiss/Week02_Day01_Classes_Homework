@@ -13,4 +13,16 @@ class TestHomework < MiniTest::Test
     assert_equal(15,tom.get_cohort())
   end
 
+  def test_set_name()
+    tom = Student.new("Tom",15)
+    tom.set_name("Tony")
+    assert_equal("Tony",tom.get_name())
+  end
+
+  def test_set_cohort()
+    tom = Student.new("Tom",15)
+    tom.set_cohort(16)
+    assert_equal(16, tom.get_cohort())
+  end
+
 end
