@@ -50,6 +50,18 @@ class TestHomework < MiniTest::Test
     assert_equal("Boris Johnson", pistons.coach)
   end  
 
+  def test_new_player
+    pistons = SportsTeam.new("Pennsylvania Pistons", ["Bradley Smith", "Chad Hunter"], "Henry Black")
+    pistons.new_player("Radzhad Hussein")
+    assert_equal("Radzhad Hussein", pistons.players[2])
+  end
+
+  def test_player_in_team?
+    pistons = SportsTeam.new("Pennsylvania Pistons", ["Bradley Smith", "Chad Hunter"], "Henry Black")
+    assert_equal(true, pistons.player_in_team?("Chad Hunter"))
+    assert_equal(false, pistons.player_in_team?("Theresa May"))
+  end
+      
 
 end
 

@@ -58,4 +58,12 @@ class SportsTeam
 #    @coach = name
 #  end
 
+  def new_player(name)
+    @players.push(name)
+  end
+
+  def player_in_team?(name)
+    return @players.include?(name)
+  end
+
 end
