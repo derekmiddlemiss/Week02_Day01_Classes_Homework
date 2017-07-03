@@ -25,4 +25,10 @@ class TestHomework < MiniTest::Test
     assert_equal(16, tom.get_cohort())
   end
 
+  def test_talk
+    tom = Student.new("Tom",15)
+    actual = tom.talk()
+    assert_equal("My name is Tom, how are you?", actual)
+  end
+
 end

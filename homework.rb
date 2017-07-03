@@ -20,5 +20,10 @@ class Student
   def set_cohort(cohort)
       @cohort = cohort
   end
+
+  def talk()
+    return "My name is #{@name}, how are you?"
+  end
+
 end
 
