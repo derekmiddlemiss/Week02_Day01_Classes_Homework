@@ -39,11 +39,16 @@ class TestHomework < MiniTest::Test
 
   def test_sportsteam_getters
     pistons = SportsTeam.new("Pennsylvania Pistons", ["Bradley Smith", "Chad Hunter"], "Henry Black")
-    assert_equal("Pennsylvania Pistons", pistons.get_name())
-    assert_equal("Bradley Smith", pistons.get_players[0])
-    assert_equal("Henry Black", pistons.get_coach)
+    assert_equal("Pennsylvania Pistons", pistons.name)
+    assert_equal("Bradley Smith", pistons.players[0])
+    assert_equal("Henry Black", pistons.coach)
   end
 
+  def test_new_coach
+    pistons = SportsTeam.new("Pennsylvania Pistons", ["Bradley Smith", "Chad Hunter"], "Henry Black")
+    pistons.coach = "Boris Johnson"
+    assert_equal("Boris Johnson", pistons.coach)
+  end  
 
 
 end
