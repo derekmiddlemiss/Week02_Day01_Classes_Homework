@@ -37,7 +37,12 @@ class TestHomework < MiniTest::Test
     assert_equal("My favourite language is Ruby", actual)
   end
 
-
+  def test_sportsteam_getters
+    pistons = SportsTeam.new("Pennsylvania Pistons", ["Bradley Smith", "Chad Hunter"], "Henry Black")
+    assert_equal("Pennsylvania Pistons", pistons.get_name())
+    assert_equal("Bradley Smith", pistons.get_players[0])
+    assert_equal("Henry Black", pistons.get_coach)
+  end
 
 
 
